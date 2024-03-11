@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+        <h1 id="naslov">Chat</h1>
+        <h2 id="podnaslov">Choose a chatroom</h2>
+   </header>
+    <div id="btnsForRooms">
+        <input type="button" name="room" id="general" value="#general">
+        <input type="button" name="room" id="js" value="#js">
+        <input type="button" name="room" id="homework" value="#homework">
+        <input type="button" name="room" id="tests" value="#tests">
+    </div>
+    <section id="sekcijaZaPoruke">
+        <ul id="lista">
+            
+        </ul>
+    </section>
+    <div id="divColorPick">
+        <input type="color" name="colorPicker" id="colorPicker">
+        <input type="button" id="colorBtn" value="Change color of chat"> <br> <br>
+    </div>
+    <form id="formMessage">
+        <textarea name="message" id="message" placeholder="Your message..." cols="30" rows="1"></textarea>
+        <input type="button" name="sendmsg" id="sendmsg" value="Send"> 
+    </form> <br>
+    <form id="formUsername">
+        <input type="text" name="updateUsername" id="updateUsername" placeholder="Update username">
+        <input type="button" name="update" id="update" value="Update">
+    </form>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+    <script>
+        const firebaseConfig = {
+        apiKey: "AIzaSyARZ33Uob8SVVr-ZkT6X7pBDJPghXbHPpY",
+        authDomain: "chat-e0a44.firebaseapp.com",
+        projectId: "chat-e0a44",
+        storageBucket: "chat-e0a44.appspot.com",
+        messagingSenderId: "410799953612",
+        appId: "1:410799953612:web:485ddaa92890983d601469"
+    };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let db = firebase.firestore();
+    </script>
+    <script src="app.js" type="module"></script>
+</body>
+</html>
